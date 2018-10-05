@@ -1,5 +1,5 @@
-# gold-bars
-Gold Bars is a collection of GTK based themes with gold coloring and 3-dimensional icons. The package includes GTK2, GTK3, Metacity and Openbox themes.
+# GoldBars
+GoldBars is a collection of GTK based themes with gold coloring and 3-dimensional icons. The package includes GTK2, GTK3, Metacity and Openbox themes.
 
 ## How to Install
 
