@@ -1,0 +1,25 @@
+/* Gold Bars- GTK+3.20 version */
+/* GTK Main file */
+
+@define-color theme_bg_color #fff2be;
+@define-color theme_base_color #fffdf3;
+@define-color theme_fg_color rgba(0, 0, 0, 0.85);
+
+@define-color theme_button_color #fdd017;
+@define-color theme_trough_color #ffda45;
+
+@define-color theme_dark_color #a38300;
+@define-color theme_darker_color #544400;
+@define-color theme_medium_color #cfa600;
+@define-color theme_light_color #fff2be;
+
+@define-color theme_border_color #cfa600;
+@define-color theme_light_border_color #ecdd9f;
+@define-color theme_dark_border_color #a98800;
+
+@define-color theme_selected_bg_color #cfa600;
+@define-color theme_selected_fg_color rgba(255, 255, 255, 0.9);
+@define-color theme_disabled_color rgba(0, 0, 0, 0.5);
+@define-color theme_disabled_bg_color #fff2be;
+@define-color theme_link_color #3b24af;
+@define-color theme_red #9c0012;
