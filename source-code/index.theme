@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Gold Bars
+Comment=A collection of themes with a gold color
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=GoldBars
+MetacityTheme=GoldBars
+ApplicationFont=DejaVu Sans Condensed 14
