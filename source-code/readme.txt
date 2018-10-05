@@ -19,4 +19,4 @@ The Metacity theme in this package is a derivative of Numix. Please see the read
 Please see the webpage https://www.gnu.org/licenses/gpl-3.0.html for more information.
 
 The GTK+ 3 versions, if any, in this theme package have been tested in gnome versions:
-3.22
+3.24
