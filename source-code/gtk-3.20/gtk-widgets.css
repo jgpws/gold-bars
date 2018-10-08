@@ -84,6 +84,7 @@ entry {
 }
 
 button,
+button.flat:hover,
 spinbutton button,
 combobox button,
 combobox entry,
@@ -93,6 +94,7 @@ scale slider {
 }
 
 button,
+button.flat:hover,
 spinbutton,
 entry,
 textview,
@@ -137,6 +139,7 @@ textview /* Textview styles Firefox's address, search and address dropdown */ {
 }
 
 button,
+button.flat:hover,
 menubar > menuitem:active,
 menuitem:hover,
 progressbar.horizontal progress,
@@ -157,6 +160,7 @@ row:selected,
 
 /* Buttons/Spin Buttons/Checkboxes/Radios */
 button,
+button.flat:hover,
 toolbar button:hover,
 toolbar button:checked,
 scale slider,
@@ -219,6 +223,13 @@ button:backdrop {
 
 button label {
 	padding: 0px 3px;
+}
+
+button.flat {
+	border: 1px solid transparent;
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
 }
 
 button.link {
@@ -349,7 +360,7 @@ popover modelbutton:hover {
 	background-color: @theme_selected_bg_color;
 }
 
-window decoration,
+window.csd decoration,
 headerbar {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
@@ -386,10 +397,6 @@ headerbar button.minimize {
 }
 
 toolbar button {
-	border: 1px solid transparent;
-	background-color: transparent;
-	background-image: none;
-	box-shadow: none;
 	margin: 2px;
 	padding: 3px 6px;
 }
@@ -397,16 +404,6 @@ toolbar button {
 toolbar button:disabled {
 	border: 1px solid transparent;
 	box-shadow: none;
-}
-
-toolbar button:hover,
-toolbar button:checked {
-	border: 1px solid @theme_border_color;
-	background-color: @theme_button_color;
-	background-image: linear-gradient(to bottom,
-		rgba(255, 255, 255, 0) 0%,
-		rgba(255, 255, 255, 0.75) 50%,
-		rgba(255, 255, 255, 0) 100%);
 }
 
 /* Path bar inside window- denoted by class .path-bar */
@@ -1145,8 +1142,8 @@ scale trough {
 	outline-offset: -2px;
 }
 
-scale.horizontal trough {
-	margin: 6px;
+scale.horizontal {
+	padding: 6px;
 }
 
 scale.horizontal slider {
@@ -1163,6 +1160,28 @@ scale.vertical slider {
 	margin: 0px -4px;
 	min-width: 10px;
 	min-height: 30px; 
+}
+
+scale marks {
+	color: @theme_border_color;
+}
+
+scale marks.top {
+	margin: -6px 6px 0px 6px;
+}
+
+scale marks.bottom {
+	margin: 0px 6px -3px 6px;
+}
+
+scale.horizontal indicator {
+	min-height: 6px;
+	min-width: 1px;
+}
+
+scale.vertical indicator {
+	min-height: 1px;
+	min-width: 6px;
 }
 
 /* Popovers */
@@ -1284,6 +1303,7 @@ expander arrow:checked {
 
 /* Calendar */
 calendar {
+	color: @theme_fg_color;
 	padding: 3px;
 }
 
