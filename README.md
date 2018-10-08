@@ -27,7 +27,7 @@ GoldBars is a collection of GTK based themes with gold coloring and 3-dimensiona
 
 GoldBars can be found in the Arch User Repository. To install, you can use an AUR helper:
 
-`yay -G goldbars`
+`yay -S goldbars`
 
 ## After Installation
 
