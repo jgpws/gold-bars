@@ -1,0 +1,8 @@
+Changelog for GoldBars
+
+10/08/18
+Fixed rendering for the Calendar GTK widget (it had white text, white background). 
+
+Added marks for GTK scales that have them.
+
+Made flat buttons (button.flat) show the normal button styling only on hover.
