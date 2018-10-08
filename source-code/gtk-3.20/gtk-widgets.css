@@ -919,8 +919,13 @@ treeview header button label {
 	padding-right: 6px;
 }
 
+paned .view {
+	background-color: transparent;
+}
+
 list,
 treeview,
+treeview.view,
 view,
 .view,
 view text {
