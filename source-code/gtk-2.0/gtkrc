@@ -1,5 +1,6 @@
 style "default"
 {
+	
 	# use theme engine
 	engine "murrine"
 	{
@@ -50,11 +51,12 @@ style "default"
 	GtkButton::child-displacement-y = 1
 	GtkButton::default-border = { 0, 0, 0, 0 }
 	GtkButton::image-spacing = 4
+	GtkCheckButton::indicator-size = 16
 	GtkMenuBar::internal-padding = 0
 	GtkMenu::horizontal-padding = 0
 	GtkMenu::vertical-padding = 0
-	GtkTreeView::even-row-color = "#ffffff"
-	GtkTreeView::odd-row-color = "#fffdf3"
+	GtkTreeView::even-row-color = "#fffdf3"
+	GtkTreeView::odd-row-color = "#fff2be"
 	GtkWidget::link-color = "#3b24af"
 	GtkWidget::visited-link-color = "#5325b0"
 }
@@ -89,6 +91,209 @@ style "default-checkbutton"
 	bg[PRELIGHT] = mix (0.5, "#a38300", "#fffdf3")
 	bg[SELECTED] = mix (0.5, "#a38300", "#fffdf3")
 	fg[ACTIVE] = "#333333"
+	
+	# Custom buttons
+	engine "pixmap" {
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = NORMAL
+			shadow = OUT
+			overlay_file = "assets/check-unselected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = NORMAL
+			shadow = IN
+			overlay_file = "assets/check-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = PRELIGHT
+			shadow = OUT
+			overlay_file = "assets/check-unselected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = PRELIGHT
+			shadow = IN
+			overlay_file = "assets/check-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = ACTIVE
+			shadow = OUT
+			overlay_file = "assets/check-unselected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = ACTIVE
+			shadow = IN
+			overlay_file = "assets/check-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = SELECTED
+			shadow = OUT
+			overlay_file = "assets/check-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = SELECTED
+			shadow = IN
+			overlay_file = "assets/check-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = INSENSITIVE
+			shadow = OUT
+			overlay_file = "assets/check-unselected-disabled.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = CHECK
+			recolorable = FALSE
+			state = INSENSITIVE
+			shadow = IN
+			overlay_file = "assets/check-selected-disabled.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = NORMAL
+			shadow = OUT
+			overlay_file = "assets/radio-unselected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = NORMAL
+			shadow = IN
+			overlay_file = "assets/radio-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = PRELIGHT
+			shadow = OUT
+			overlay_file = "assets/radio-unselected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = PRELIGHT
+			shadow = IN
+			overlay_file = "assets/radio-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = ACTIVE
+			shadow = OUT
+			overlay_file = "assets/radio-unselected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = ACTIVE
+			shadow = IN
+			overlay_file = "assets/radio-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = SELECTED
+			shadow = OUT
+			overlay_file = "assets/radio-unselected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = SELECTED
+			shadow = IN
+			overlay_file = "assets/radio-selected.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = INSENSITIVE
+			shadow = OUT
+			overlay_file = "assets/radio-unselected-disabled.png"
+			overlay_stretch = FALSE
+		}
+		
+		image
+		{
+			function = OPTION
+			recolorable = FALSE
+			state = INSENSITIVE
+			shadow = IN
+			overlay_file = "assets/radio-selected-disabled.png"
+			overlay_stretch = FALSE
+		}
+	}
 }
 
 style "default-menubar"
@@ -121,6 +326,7 @@ style "default-menuitem"
 	ythickness = 3
 	bg[SELECTED] = mix (0.5, "#a38300", "#fff2be")
 	fg[PRELIGHT] = "#333333"
+	text[PRELIGHT] = "#333333" # For Comboboxes
 	
 	engine "murrine" {
 		gradient_shades = {1.1,1.4,1.4,1.1}
@@ -138,9 +344,16 @@ style "default-treeview"
 	base[ACTIVE] = mix (0.5, "#a38300", "#fffdf3")
 }
 
+style "default-paned-treeview"
+{
+	xthickness = 1
+	ythickness = 1
+}
+
 style "default-progressbar"
 {
-	fg[NORMAL] = "#a38300"
+	bg[ACTIVE] = mix (0.5, "#cfa600", "#fffdf3")
+	fg[NORMAL] = "#544400"
 	fg[PRELIGHT] = "#333333"
 	xthickness = 1
 	ythickness = 1
@@ -148,6 +361,11 @@ style "default-progressbar"
 	engine "murrine" {
 		gradient_shades = {1.1,1.4,1.4,1.1}
 	}
+}
+
+style "default-scale" = "default-button"
+{
+	bg[ACTIVE] = mix (0.5, "#cfa600", "#fffdf3")
 }
 
 style "default-scrollbar"
@@ -178,6 +396,7 @@ widget_class "*.GtkCheckButton*" style "default-checkbutton"
 widget_class "*.GtkRadioButton*" style "default-checkbutton"
 widget_class "*.GtkTreeView*" style "default-font"
 widget_class "*.GtkTreeView*" style "default-treeview"
+widget_class "*GtkFileChooserWidget.*" style "default-paned-treeview"
 widget_class "*.GtkMenu*" style "default-menu"
 class "GtkScrollbar" style "default-scrollbar"
 
@@ -186,5 +405,7 @@ widget_class "*<GtkMenuItem>*" style "default-menuitem"
 
 widget_class "*.GtkMenuBar*" style "default-font"
 widget_class "*.GtkMenuBar*" style "default-menubar"
+widget_class "*.GtkComboBox.GtkMenu*" style "default-menuitem"
 widget_class "*.GtkProgressBar*" style "default-progressbar"
-#widget_class "*.GtkLinkButton*" style "default-linkbutton"
+widget_class "*.GtkHScale*" style "default-scale"
+widget_class "*.GtkVScale*" style "default-scale"
