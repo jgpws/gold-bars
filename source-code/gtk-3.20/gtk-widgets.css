@@ -175,7 +175,8 @@ buttonbox button {
 }
 
 button:checked,
-button:hover {
+button:hover,
+scale slider:hover {
 	background-image: linear-gradient(to bottom,
 		rgba(255, 255, 255, 0) 0%,
 		rgba(255, 255, 255, 0.75) 50%,
@@ -1023,10 +1024,6 @@ viewport .activatable:disabled {
 }
 
 /* Scrollbars/Progressbars/Scales */
-scrollbar {
-	background-color: @theme_trough_color;
-}
-
 scrollbar.horizontal {
 	min-height: 14px;
 }
@@ -1054,6 +1051,10 @@ scrollbar.vertical button.up {
 
 scrollbar.vertical button.down {
 	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+scrollbar trough {
+	background-color: @theme_trough_color;
 }
 
 scrollbar trough slider {
@@ -1117,7 +1118,10 @@ progressbar.vertical trough slider {
 	min-width: 14px;
 }
 
-progressbar text,
+progressbar text {
+	color: @theme_darker_color;
+}
+
 scale value {
 	color: @theme_dark_color;
 }
@@ -1165,6 +1169,10 @@ scale.vertical slider {
 	margin: 0px -4px;
 	min-width: 10px;
 	min-height: 30px; 
+}
+
+scale slider:active {
+	background-color: @theme_medium_color;
 }
 
 scale marks {
