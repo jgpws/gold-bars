@@ -46,9 +46,11 @@ The above setting worked in a Compiz environment in Arch. For other desktop envi
 The latest GTK2 version of GoldBars requires the Murrine and Pixmap theme engines. To install:
 ### Ubuntu and derivatives:
 `sudo apt-get install gtk2-engines-murrine`
+
 `sudo apt-get install gtk2-engines-pixbuf`
 ### ArchLinux and derivatives:
 `sudo pacman -S gtk-engine-murrine`
+
 `sudo pacman -S gtk-engines`
 
 Note: The GTK3 version of this theme only works in version 3.20 and upwards.
