@@ -41,12 +41,14 @@ You can switch the Metacity theme from the command line:
 
 The above setting worked in a Compiz environment in Arch. For other desktop environments, see the article [Gnome Appearance modify command in Linux / How to change theme using command line in GNOME](http://www.pc-freak.net/blog/gnome-appearance-modify-command-in-linux-how-to-change-theme-using-command-line-in-gnome/).
 
-## How to Install the Murrine engine
+## How to Install the Required Theme Engines
 
-The GTK2 version of GoldBars requires the Murrine theme engine. To install:
+The latest GTK2 version of GoldBars requires the Murrine and Pixmap theme engines. To install:
 ### Ubuntu and derivatives:
 `sudo apt-get install gtk2-engines-murrine`
+`sudo apt-get install gtk2-engines-pixbuf`
 ### ArchLinux and derivatives:
 `sudo pacman -S gtk-engine-murrine`
+`sudo pacman -S gtk-engines`
 
 Note: The GTK3 version of this theme only works in version 3.20 and upwards.
