@@ -1462,6 +1462,7 @@ scrolledwindow.frame {
 	border-radius: 3px;
 }
 
+.floating-bar,
 tooltip.background {
 	background-color: @theme_bg_color;
 	color: @theme_fg_color;
