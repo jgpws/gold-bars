@@ -391,6 +391,10 @@ headerbar button:hover {
 	color: @theme_fg_color;
 }
 
+headerbar button.flat:hover {
+	box-shadow: none;
+}
+
 headerbar button.close,
 headerbar button.maximize,
 headerbar button.minimize {
@@ -713,7 +717,7 @@ entry image:disabled {
 	/*border-left: none;*/
 }
 
-/*.horizontal combobx entry.combo {
+/*.horizontal combobox entry.combo {
 	border-left: 1px solid @theme_border-color;
 }*/
 
@@ -737,7 +741,7 @@ combobox arrow {
 	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 	color: @theme_fg_color;
 	min-height: 16px;
-	min-width: 24px;
+	min-width: 16px;
 }
 
 combobox menuitem {
@@ -1243,6 +1247,17 @@ popover button image {
 	color: @theme_fg_color;
 }
 
+popover modelbutton:hover {
+	background-color: @theme_dark_color;
+}
+
+popover label:disabled,
+popover modelbutton:disabled,
+popover modelbutton .horizontal:disabled,
+popover modelbutton label:disabled {
+	background-color: transparent;
+}
+
 popover separator.horizontal {
 	margin: 6px 0px;
 }
@@ -1456,6 +1471,8 @@ tooltip.background {
 rubberband,
 flowbox rubberband,
 treeview.view rubberband,
+.view rubberband,
+.view .rubberband,
 .content-view rubberband,
 .rubberband {
 	border: 1px solid @theme_border_color;
