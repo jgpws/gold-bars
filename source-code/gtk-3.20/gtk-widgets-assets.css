@@ -32,7 +32,9 @@ menu menuitem radio {
 checkbutton check,
 radiobutton radio,
 menu menuitem check,
-menu menuitem radio {
+menu menuitem radio,
+modelbutton check,
+modelbutton radio {
 	border: 2px solid;
 	border-color:  @theme_border_color;
 	border-style: inset;
@@ -118,7 +120,8 @@ menu menuitem check:checked:focus:indeterminate {
 }
 
 radiobutton radio,
-menu menuitem radio {
+menu menuitem radio,
+modelbutton radio {
 	border-radius: 50%;
 }
 
