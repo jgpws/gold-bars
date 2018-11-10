@@ -13,7 +13,7 @@ GoldBars is a collection of GTK based themes with gold coloring and 3-dimensiona
 6. type `cd` again to get to your home folder; type `ls -a` and see if there is a **.themes** directory
 7. If one does not exist, create one: `mkdir .themes`
 8. `cd Downloads`
-9. `cp JGD-Black ../.themes`
+9. `cp GoldBars ../.themes`
 
 ### To Install GoldBars Globally
 
