@@ -20,7 +20,6 @@
 }
 
 *:disabled {
-	background-color: @theme_disabled_bg_color;
 	color: @theme_disabled_color;
 }
 
@@ -166,7 +165,7 @@ toolbar button:checked,
 scale slider,
 progressbar progress {
 	/*margin: 1px;*/
-	box-shadow: inset -2px -2px 1px 0px rgba(84, 68, 0, 0.50), 
+	box-shadow: inset -2px -2px 1px 0px rgba(84, 68, 0, 0.50),
 					inset 2px 2px 1px 0px rgba(255, 255, 255, 0.50);
 }
 
@@ -198,7 +197,7 @@ button:active {
 }
 
 button:disabled {
-	box-shadow: inset -2px -2px 1px 0px rgba(84, 68, 0, 0.25), 
+	box-shadow: inset -2px -2px 1px 0px rgba(84, 68, 0, 0.25),
 					inset 2px 2px 1px 0px rgba(255, 255, 255, 0.25);
 }
 
@@ -341,7 +340,7 @@ notebook header tab button {
 notebook header tab:hover button {
 	background-color: rgba(255, 255, 255, 0.25);
 	border: 1px solid rgba(0, 0, 0, 0.25);
-	box-shadow: inset -2px -2px 1px 0px rgba(84, 68, 0, 0.50), 
+	box-shadow: inset -2px -2px 1px 0px rgba(84, 68, 0, 0.50),
 					inset 2px 2px 1px 0px rgba(255, 255, 255, 0.50);
 }
 
@@ -493,7 +492,7 @@ treeview button {
 	border-bottom: 1px solid @theme_light_border_color;
 	border-left-style: none;
 	border-radius: 0px;
-	box-shadow: inset -1px -1px 1px 0px rgba(84, 68, 0, 0.50), 
+	box-shadow: inset -1px -1px 1px 0px rgba(84, 68, 0, 0.50),
 					inset 1px 1px 1px 0px rgba(255, 255, 255, 0.50);
 	margin: 0px;
 }
@@ -617,6 +616,10 @@ menu menuitem:hover {
 	background-color: mix (@theme_base_color, @theme_dark_color, 0.5);
 	color: @theme_fg_color;
 	border: 1px solid @theme_dark_border_color;
+}
+
+menuitem:disabled {
+	background-color: @theme_disabled_bg_color;
 }
 
 menubar menuitem menuitem { /* two levels deep */
@@ -786,7 +789,7 @@ notebook header.top {
 notebook header.right {
 	border-left: 1px solid mix (@theme_base_color, @theme_dark_color, 0.75);
 	padding-right: 6px;
-	
+
 }
 
 notebook header.bottom {
@@ -1063,7 +1066,7 @@ scrollbar trough {
 
 scrollbar trough slider {
 	background-color: @theme_button_color;
-	box-shadow: inset -1px -1px 1px 0px rgba(84, 68, 0, 0.50), 
+	box-shadow: inset -1px -1px 1px 0px rgba(84, 68, 0, 0.50),
 					inset 1px 1px 1px 0px rgba(255, 255, 255, 0.50);
 }
 
@@ -1172,7 +1175,7 @@ scale.vertical slider {
 		rgba(255, 255, 255, 0) 100%);
 	margin: 0px -4px;
 	min-width: 10px;
-	min-height: 30px; 
+	min-height: 30px;
 }
 
 scale slider:active {
